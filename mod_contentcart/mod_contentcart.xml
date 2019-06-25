@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>MOD_CONTENTCART_NAME</name>
+    <author>Efanych</author>
+    <authorEmail>efanych@gmail.com</authorEmail>
+	<creationDate>@date@</creationDate>
+    <authorUrl>https://joomlaforum.ru/index.php?action=profile;u=79782</authorUrl>
+    <copyright>(C) 2018 Joomline. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>@version@</version>
+	<description>MOD_CONTENTCART_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_contentcart">mod_contentcart.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	 <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_contentcart.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_contentcart.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_contentcart.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_contentcart.sys.ini</language>
+    </languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field
+                    name="enable_css"
+                    type="list"
+                    default="1"
+                    label="MOD_CONTENTCART_ENABLE_CSS"
+                    description="MOD_CONTENTCART_ENABLE_CSS_DESC"
+                >
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+            </field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
