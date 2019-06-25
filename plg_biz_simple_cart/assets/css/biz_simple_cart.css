@@ -1,0 +1,93 @@
+.biz_simple_cart {
+	margin: 10px;
+}
+
+.biz_simple_cart input.bsc-input, .biz_simple_cart select.bsc-input {
+    height: 32px;
+    line-height: 32px;
+    margin: 8px 0;
+}
+
+.bsc-button:hover {
+    background-color: #0070a5;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.bsc-button {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 2;
+    text-transform: uppercase;
+    border: none;
+    background-color: #00588a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bsc-count {
+	max-width: 125px
+}
+
+.biz_simple_cart a.bsc-button {
+    text-decoration: none;
+} 
+
+.bsc-button.bsc-success {
+	background-color:#5bb75b;
+}
+
+.bsc-button.bsc-success:hover {
+	background-color:#51a351;
+}
+
+.biz_simple_cart .bsc-textarea {
+    margin: 8px 0;
+}
+
+.bsc-block-data {
+    text-align: center;
+}
+
+.bsc-block-data .bsc-input, .bsc-block-data .bsc-textarea {
+    min-width: 280px;
+}
+
+.biz_simple_cart table {
+	text-align: left;
+}
+
+.biz_simple_cart table tr {
+	height: 32px;
+    line-height: 32px;
+}
+
+.biz_simple_cart table th {
+    background-color: #c4c4c433;
+    padding-left: 8px;
+}
+
+.biz_simple_cart table td {
+    padding-left: 8px;
+}
+
+.bsc-title-data {
+    text-align: center;
+}
+
+tr.order_item {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.content_cart.biz_simple_cart {
+    border: 1px solid #e5e3e3;
+    padding: 10px;
+}
+.money {
+	text-align: right;
+	font-family: "Lucida Console", Monaco, monospace;
+}

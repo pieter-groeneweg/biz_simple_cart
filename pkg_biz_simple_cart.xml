@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.9" method="upgrade">
+    <name>Biz Simple Cart - forked from Joomline/ContentCart</name>
+    <author>bizgo.nl</author>
+	<packagename>pkg_biz_simple_cart</packagename>
+    <creationDate>@date@</creationDate>
+	<copyright>(C) 2019 bizgo.nl. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>info@bizgo.nl</authorEmail>
+	<packager>-</packager>
+	<packagerurl>https://bizgo.nl</packagerurl>
+    <version>@version@</version>
+    <description><![CDATA[Сontent cart - After installation, activate the plugin plg_biz_simple_cart. Set up and publish the module.]]></description>
+    <files>
+            <folder type="module" id="mod_biz_simple_cart" method="upgrade" client="site">mod_biz_simple_cart</folder>
+            <folder type="plugin" id="biz_simple_cart" group="content" method="upgrade" client="site">plg_biz_simple_cart</folder>
+    </files>
+    <updateservers><server type="extension" priority="1" name=""></server></updateservers>
+</extension>
