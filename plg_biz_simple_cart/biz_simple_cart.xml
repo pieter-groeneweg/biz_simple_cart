@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<extension type="plugin" version="3.8" method="upgrade" group="content">
+    <name>PLG_BIZ_SIMPLE_CART</name>
+    <author></author>
+    <authorEmail></authorEmail>
+	<creationDate></creationDate>
+    <authorUrl></authorUrl>
+    <copyright>(C) 2019 bizgo.nl, All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>0.0.1</version>
+    <description>PLG_BIZ_SIMPLE_CART_DESC</description>
+    <files>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+        <filename plugin="biz_simple_cart">biz_simple_cart.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<!-- disabled this as it is not functioning as expected<field name="mymenuitem" type="menuitem" default="" label="BIZ_SIMPLE_CART_MENU" description="BIZ_SIMPLE_CART_MENU_DESC" >
+					<option	value="">JNO</option>
+				</field>-->
+				<field
+					name="using_price"
+					type="radio"
+					label="BIZ_SIMPLE_CART_PRICE_USING"
+					description="BIZ_SIMPLE_CART_PRICE_USING_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="price_id" type="text" label="BIZ_SIMPLE_CART_PRICE_ID" description="BIZ_SIMPLE_CART_PRICE_ID_DESC"/>
+				<field name="currency" type="text" label="BIZ_SIMPLE_CART_CURRENCY" description="BIZ_SIMPLE_CART_CURRENCY_ID_DESC"/>				
+				
+				<field
+					name="using_size"
+					type="radio"
+					label="BIZ_SIMPLE_CART_SIZE_USING"
+					description="BIZ_SIMPLE_CART_SIZE_USING_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="size_id" type="text" label="BIZ_SIMPLE_CART_SIZE_ID" description="BIZ_SIMPLE_CART_SIZE_ID_DESC"/>
+
+				<field
+					name="category_filtering_type"
+					type="radio"
+					label="BIZ_SIMPLE_CART_CATFILTERINGTYPE"
+					description="BIZ_SIMPLE_CART_CATFILTERINGTYPE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">BIZ_SIMPLE_CART_CATEGORY_OPTION_INCLUSIVE</option>
+					<option value="0">BIZ_SIMPLE_CART_CATEGORY_OPTION_EXCLUSIVE</option>
+				</field>
+
+				<field
+					name="catid"
+					type="category"
+					label="JCATEGORY"
+					description="BIZ_SIMPLE_CART_CATEGORY_DESC"
+					extension="com_content"
+					multiple="true"
+					size="5"
+					>
+				</field>
+				<field 
+				name="application_area" 
+				type="list" 
+				default="com_content.article" 
+				multiple="true" 
+				label="BIZ_SIMPLE_CART_APPLICATION_AREA" 
+				description="BIZ_SIMPLE_CART_APPLICATION_AREA_DESC"
+				>
+  				<option value="com_content.article">BIZ_SIMPLE_CART_ARTICLE</option>
+  				<option value="com_content.category">BIZ_SIMPLE_CART_BLOG</option>
+  				<option value="com_content.featured">BIZ_SIMPLE_CART_FEATURED</option>
+				</field>
+				<field
+					name="cat_for_orders"
+					type="category"
+					label="BIZ_SIMPLE_CART_CATEGORY_FOR_ORDERS"
+					description="BIZ_SIMPLE_CART_CATEGORY_FOR_ORDERS_DESC"
+					extension="com_content"
+					default=""
+					size="5"
+					>
+					<option value="">JNONE</option>
+				</field>
+				<field
+                    name="enable_css"
+                    type="list"
+                    default="1"
+                    label="BIZ_SIMPLE_CART_ENABLE_CSS"
+                    description="BIZ_SIMPLE_CART_ENABLE_CSS_DESC"
+					>
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+            	<field name="shop_email" type="email" label="BIZ_SIMPLE_CART_SHOP_EMAIL" description="BIZ_SIMPLE_CART_SHOP_EMAIL_DESC" required="true" size="60" class="inputbox" validate="email"/>
+				
+            </fieldset>
+			<fieldset name="client_info">
+				<field
+					name="client_name"
+					type="radio"
+					label="BIZ_SIMPLE_CART_CLIENT_NAME"
+					description="BIZ_SIMPLE_CART_CLIENT_NAME_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="2">BIZ_SIMPLE_CART_REQUIRED</option>
+					<option value="1">BIZ_SIMPLE_CART_NOT_REQUIRED</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="client_email"
+					type="radio"
+					label="BIZ_SIMPLE_CART_CLIENT_EMAIL"
+					description="BIZ_SIMPLE_CART_CLIENT_EMAIL_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="2">BIZ_SIMPLE_CART_REQUIRED</option>
+					<option value="1">BIZ_SIMPLE_CART_NOT_REQUIRED</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="client_phone"
+					type="radio"
+					label="BIZ_SIMPLE_CART_CLIENT_PHONE"
+					description="BIZ_SIMPLE_CART_CLIENT_PHONE_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="2">BIZ_SIMPLE_CART_REQUIRED</option>
+					<option value="1">BIZ_SIMPLE_CART_NOT_REQUIRED</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="client_note"
+					type="radio"
+					label="BIZ_SIMPLE_CART_CLIENT_NOTE"
+					description="BIZ_SIMPLE_CART_CLIENT_NOTE_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="2">BIZ_SIMPLE_CART_REQUIRED</option>
+					<option value="1">BIZ_SIMPLE_CART_NOT_REQUIRED</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="title_note" type="text" label="BIZ_SIMPLE_CART_TITLE_NOTE" description="BIZ_SIMPLE_CART_TITLE_NOTE_DESC" default="" />
+			</fieldset>
+        </fields>
+    </config>
+</extension>
