@@ -80,9 +80,9 @@
 				label="BIZ_SIMPLE_CART_APPLICATION_AREA" 
 				description="BIZ_SIMPLE_CART_APPLICATION_AREA_DESC"
 				>
-  				<option value="com_content.article">BIZ_SIMPLE_CART_ARTICLE</option>
-  				<option value="com_content.category">BIZ_SIMPLE_CART_BLOG</option>
-  				<option value="com_content.featured">BIZ_SIMPLE_CART_FEATURED</option>
+  				<option value="com_content.article">JGLOBAL_ARTICLES</option>
+  				<option value="com_content.category">JCATEGORY</option>
+  				<option value="com_content.featured">JFEATURED</option>
 				</field>
 				<field
 					name="cat_for_orders"
